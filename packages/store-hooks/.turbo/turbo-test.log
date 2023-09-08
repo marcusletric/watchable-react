@@ -1,0 +1,14 @@
+
+> @watchable-react/store-hooks@1.0.0 test /Users/kmartyin/work/watchable-react/packages/store-hooks
+> vitest run
+
+
+ RUN  v0.34.3 /Users/kmartyin/work/watchable-react/packages/store-hooks
+
+ ✓ test/lib/usePartition.test.tsx > usePartition : create, watch and update a partition > Creates, watches and updates a new partition
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  12:55:07
+   Duration  2.88s (transform 37ms, setup 0ms, collect 2.04s, tests 24ms, environment 564ms, prepare 55ms)
+

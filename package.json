@@ -1,0 +1,36 @@
+{
+  "name": "watchable-react",
+  "version": "0.1.0",
+  "description": "React utility packages for @watchable/store",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "turbo run test --include-dependencies",
+    "build": "turbo run build --include-dependencies",
+    "doc": "turbo run build && typedoc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcusletric/watchable-react.git"
+  },
+  "keywords": [
+    "watchable",
+    "request",
+    "http",
+    "cache"
+  ],
+  "author": "Kornel Martyin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcusletric/watchable-react/issues"
+  },
+  "homepage": "https://github.com/marcusletric/watchable-react#readme",
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "rimraf": "^5.0.1",
+    "turbo": "^1.10.13",
+    "typedoc": "^0.25.1"
+  }
+}

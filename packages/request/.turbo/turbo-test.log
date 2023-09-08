@@ -1,0 +1,22 @@
+
+> @watchable-react/request@0.1.0 test /Users/kmartyin/work/watchable-react/packages/request
+> vitest run
+
+
+ RUN  v0.34.3 /Users/kmartyin/work/watchable-react/packages/request
+
+ ✓ test/lib/requestHandler.test.ts > requestHandler > Can handle and store in cache a basic request when the store is prepared
+ ✓ test/lib/requestHandler.test.ts > requestHandler > Can handle and store in cache a basic request when there is no cache partition in the store
+ ✓ test/lib/requestHandler.test.ts > requestHandler > Can handle and store in cache multipe basic requests
+ ✓ test/lib/useRequest.test.tsx > useRequest hook > Minimum viable product
+ ✓ test/lib/useRequest.test.tsx > useRequest hook > Handles request states properly
+ ✓ test/lib/useRequest.test.tsx > useRequest hook > Returns cached value on multiple renders
+ ✓ test/lib/useRequest.test.tsx > useRequest hook > Returns cached value until refresh is called
+ ✓ test/lib/useRequest.test.tsx > useRequest hook > Handles multiple parameters
+ ✓ test/lib/useRequest.test.tsx > useRequest hook > Handles errors gracefully
+
+ Test Files  2 passed (2)
+      Tests  9 passed (9)
+   Start at  12:55:07
+   Duration  2.97s (transform 106ms, setup 0ms, collect 2.10s, tests 109ms, environment 1.13s, prepare 218ms)
+
