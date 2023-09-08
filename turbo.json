@@ -14,6 +14,12 @@
                 "build",
                 "^test"
             ]
+        },
+        "coverage": {
+            "dependsOn": [
+                "build",
+                "^coverage"
+            ]
         }
     }
 }

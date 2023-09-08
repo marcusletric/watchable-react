@@ -14,14 +14,15 @@ export default defineConfig({
             fileName: 'request',
         },
         rollupOptions: {
-            external: Object.keys(packageJson.dependencies),
+            external: Object.keys(packageJson.peerDependencies),
         },
     },
     test: {
         reporters: ['verbose'],
         environment: "jsdom",
-        chaiConfig: {
-            truncateThreshold: 100,
-        },
+        coverage: {
+            provider: 'istanbul',
+            reporter: ['text', 'lcov']
+        }
     },
 });

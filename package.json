@@ -9,6 +9,7 @@
   "scripts": {
     "test": "turbo run test --include-dependencies",
     "build": "turbo run build --include-dependencies",
+    "coverage": "turbo run coverage --include-dependencies",
     "doc": "turbo run build && typedoc"
   },
   "repository": {

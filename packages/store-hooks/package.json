@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "vitest run",
+    "coverage": "vitest run --coverage",
     "build": "rimraf ./dist && tsc --project tsconfig.build.json && vite build"
   },
   "keywords": [],
@@ -19,6 +20,7 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/react": "^18.2.21",
+    "@vitest/coverage-istanbul": "^0.34.4",
     "@watchable/store": "^1.0.0-alpha.5",
     "@watchable/store-react": "^1.0.0-alpha.5",
     "jsdom": "^22.1.0",
