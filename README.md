@@ -14,16 +14,16 @@ This monorepo holds some utilities to streamline app development when using ![@w
 
 ### @watchable-react/request
 
-[![npm](http://img.shields.io/npm/v/@watchable-react_request.svg)](https://www.npmjs.com/package/@watchable-react_request)
-[![npm](https://img.shields.io/npm/dm/@watchable-react/request.svg)](https://www.npmjs.com/package/@watchable-react_request)
+![npm (scoped)](https://img.shields.io/npm/v/%40watchable-react/request)
+![npm](https://img.shields.io/npm/dt/%40watchable-react%2Frequest)
 [![License](https://img.shields.io/npm/l/watchable-react.svg)](https://github.com/marcusletric/watchable-react/blob/main/LICENSE)
 
 This package has the [useRequest](https://marcusletric.github.io/watchable-react/functions/_watchable_react_request.useRequest.html) hook that tries to simplify and streamline HTTP request management in a watchable store. It deals with caching and status management out of the box.
 
 ### @watchable-react/store-hooks
 
-[![npm](http://img.shields.io/npm/v/@watchable-react_store-hooks.svg)](https://www.npmjs.com/package/@watchable-react_store-hooks)
-[![npm](https://img.shields.io/npm/dm/@watchable-react_store-hooks.svg)](https://www.npmjs.com/package/@watchable-react_store-hooks)
+![npm (scoped)](https://img.shields.io/npm/v/%40watchable-react/store-hooks)
+![npm](https://img.shields.io/npm/dt/%40watchable-react%2Fstore-hooks)
 [![License](https://img.shields.io/npm/l/watchable-react.svg)](https://github.com/marcusletric/watchable-react/blob/main/LICENSE)
 
 This package is a collection of React hooks that takes away some of the boilerplate associated with writing the store. 
