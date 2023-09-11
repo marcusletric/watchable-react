@@ -4,9 +4,9 @@
 
 vite v4.4.9 building for production...
 transforming...
-✓ 12 modules transformed.
+✓ 7 modules transformed.
 rendering chunks...
 computing gzip size...
-dist/request.mjs  57.97 kB │ gzip: 15.37 kB
-dist/request.js  35.18 kB │ gzip: 12.02 kB
-✓ built in 182ms
+dist/request.mjs  52.58 kB │ gzip: 12.98 kB
+dist/request.js  35.95 kB │ gzip: 11.62 kB
+✓ built in 167ms

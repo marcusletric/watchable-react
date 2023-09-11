@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>usePartition | @watchable-react - v0.1.0</title><meta name="description" content="Documentation for @watchable-react"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>StoreWithCache | @watchable-react - v0.1.0</title><meta name="description" content="Documentation for @watchable-react"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -13,38 +13,22 @@
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
 <li><a href="../index.html">@watchable-react</a></li>
-<li><a href="../modules/_watchable_react_store_hooks.html">@watchable-react/store-hooks</a></li>
-<li><a href="_watchable_react_store_hooks.usePartition.html">usePartition</a></li></ul>
-<h1>Function usePartition</h1></div>
-<section class="tsd-panel">
-<ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="usePartition"><span class="tsd-kind-call-signature">use<wbr/>Partition</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">State</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">store</span>, <span class="tsd-kind-parameter">partitionKey</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type ">Immutable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">PartitionableState</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type tsd-kind-type-parameter">State</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type tsd-kind-type-parameter">State</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">newValue</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">]</span><a href="#usePartition" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>A hook for tracking and updating a @watchable/store!PartitionableState</p>
-</div>
+<li><a href="../modules/_watchable_react_request.html">@watchable-react/request</a></li>
+<li><a href="../modules/_watchable_react_request.types.html">types</a></li>
+<li><a href="_watchable_react_request.types.StoreWithCache.html">StoreWithCache</a></li></ul>
+<h1>Type alias StoreWithCache&lt;StoreSchema, CacheEntryType, CachePartitionKey&gt;</h1></div>
+<div class="tsd-signature"><span class="tsd-kind-type-alias">Store<wbr/>With<wbr/>Cache</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">StoreSchema</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type tsd-kind-type-parameter">CacheEntryType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type tsd-kind-type-parameter">CachePartitionKey</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Store</span><span class="tsd-signature-symbol">&lt;</span><a href="_watchable_react_request.types.StateWithCachePartition.html" class="tsd-signature-type tsd-kind-type-alias">StateWithCachePartition</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">StoreSchema</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type tsd-kind-type-parameter">CacheEntryType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type tsd-kind-type-parameter">CachePartitionKey</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 <section class="tsd-panel">
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">State</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">object</span></h4></li></ul></section>
-<div class="tsd-parameters">
-<h4 class="tsd-parameters-title">Parameters</h4>
-<ul class="tsd-parameter-list">
+<h4><span class="tsd-kind-type-parameter">StoreSchema</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">object</span></h4></li>
 <li>
-<h5><span class="tsd-kind-parameter">store</span>: <span class="tsd-signature-type ">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">PartitionableState</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type tsd-kind-type-parameter">State</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
-<div class="tsd-comment tsd-typography"><p>The @watchable/store!Store to partition.</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li>
+<h4><span class="tsd-kind-type-parameter">CacheEntryType</span></h4></li>
 <li>
-<h5><span class="tsd-kind-parameter">partitionKey</span>: <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type tsd-kind-type-parameter">State</span></h5>
-<div class="tsd-comment tsd-typography"><p>The key of the store value to use as a partition.</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type ">Immutable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">PartitionableState</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type tsd-kind-type-parameter">State</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type tsd-kind-type-parameter">State</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">newValue</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">]</span></h4><p>a tuple with the current value of the @watchable/store!PartitionableState and a setter function.</p>
-
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<h4><span class="tsd-kind-type-parameter">CachePartitionKey</span><span class="tsd-signature-symbol"> extends </span><a href="_watchable_react_request.types.CacheKeyType.html" class="tsd-signature-type tsd-kind-type-alias">CacheKeyType</a></h4></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/marcusletric/watchable-react/blob/4b631bb/packages/store-hooks/lib/usePartition.ts#L13">usePartition.ts:13</a></li></ul></aside></li></ul></section></div>
+<li>Defined in types/cache.ts:11</li></ul></aside></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">

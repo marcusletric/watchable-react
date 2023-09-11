@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>usePartition | @watchable-react - v0.1.0</title><meta name="description" content="Documentation for @watchable-react"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>RequestResult | @watchable-react - v0.1.0</title><meta name="description" content="Documentation for @watchable-react"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -13,38 +13,63 @@
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
 <li><a href="../index.html">@watchable-react</a></li>
-<li><a href="../modules/_watchable_react_store_hooks.html">@watchable-react/store-hooks</a></li>
-<li><a href="_watchable_react_store_hooks.usePartition.html">usePartition</a></li></ul>
-<h1>Function usePartition</h1></div>
-<section class="tsd-panel">
-<ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="usePartition"><span class="tsd-kind-call-signature">use<wbr/>Partition</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">State</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">store</span>, <span class="tsd-kind-parameter">partitionKey</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type ">Immutable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">PartitionableState</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type tsd-kind-type-parameter">State</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type tsd-kind-type-parameter">State</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">newValue</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">]</span><a href="#usePartition" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>A hook for tracking and updating a @watchable/store!PartitionableState</p>
+<li><a href="../modules/_watchable_react_request.html">@watchable-react/request</a></li>
+<li><a href="../modules/_watchable_react_request.types.html">types</a></li>
+<li><a href="_watchable_react_request.types.RequestResult.html">RequestResult</a></li></ul>
+<h1>Type alias RequestResult&lt;ResolveType, Error&gt;</h1></div>
+<div class="tsd-signature"><span class="tsd-kind-type-alias">Request<wbr/>Result</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">ResolveType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type tsd-kind-type-parameter">Error</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">isLoading</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">loadingState</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Extract</span><span class="tsd-signature-symbol">&lt;</span><a href="_watchable_react_request.types.LOADING_STATE.html" class="tsd-signature-type tsd-kind-type-alias">LOADING_STATE</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;NEVER_LOADED&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">data</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type tsd-kind-type-parameter">ResolveType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type tsd-kind-type-parameter">Error</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">isLoading</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">loadingState</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Extract</span><span class="tsd-signature-symbol">&lt;</span><a href="_watchable_react_request.types.LOADING_STATE.html" class="tsd-signature-type tsd-kind-type-alias">LOADING_STATE</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;LOADING&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type tsd-kind-type-parameter">Error</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">isLoading</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">loadingState</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Extract</span><span class="tsd-signature-symbol">&lt;</span><a href="_watchable_react_request.types.LOADING_STATE.html" class="tsd-signature-type tsd-kind-type-alias">LOADING_STATE</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;ERROR&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">data</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type tsd-kind-type-parameter">ResolveType</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">isLoading</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">loadingState</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Extract</span><span class="tsd-signature-symbol">&lt;</span><a href="_watchable_react_request.types.LOADING_STATE.html" class="tsd-signature-type tsd-kind-type-alias">LOADING_STATE</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;LOADED&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
+<div class="tsd-comment tsd-typography"><p>RequestResult&lt;ResolveType, Error = unknown&gt; is a dynamic structure that holds data and state of a request
+isLoading: boolean (if the request is waiting for a response from the server)
+loadingState: <a href="_watchable_react_request.types.LOADING_STATE.html" class="tsd-kind-type-alias">LOADING_STATE</a>
+data?: ResolveType (previously loaded data)
+error?: Error (previously caught error)</p>
 </div>
 <section class="tsd-panel">
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">State</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">object</span></h4></li></ul></section>
-<div class="tsd-parameters">
-<h4 class="tsd-parameters-title">Parameters</h4>
-<ul class="tsd-parameter-list">
+<h4><span class="tsd-kind-type-parameter">ResolveType</span></h4></li>
 <li>
-<h5><span class="tsd-kind-parameter">store</span>: <span class="tsd-signature-type ">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">PartitionableState</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type tsd-kind-type-parameter">State</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
-<div class="tsd-comment tsd-typography"><p>The @watchable/store!Store to partition.</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li>
-<li>
-<h5><span class="tsd-kind-parameter">partitionKey</span>: <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type tsd-kind-type-parameter">State</span></h5>
-<div class="tsd-comment tsd-typography"><p>The key of the store value to use as a partition.</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type ">Immutable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">PartitionableState</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type tsd-kind-type-parameter">State</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type tsd-kind-type-parameter">State</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">newValue</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">]</span></h4><p>a tuple with the current value of the @watchable/store!PartitionableState and a setter function.</p>
-
+<h4><span class="tsd-kind-type-parameter">Error</span> = <span class="tsd-signature-type">unknown</span></h4></li></ul></section>
+<div class="tsd-type-declaration">
+<h4>Type declaration</h4>
+<ul class="tsd-parameters">
+<li class="tsd-parameter">
+<h5><span class="tsd-kind-property">is<wbr/>Loading</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">false</span></h5></li>
+<li class="tsd-parameter">
+<h5><span class="tsd-kind-property">loading<wbr/>State</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Extract</span><span class="tsd-signature-symbol">&lt;</span><a href="_watchable_react_request.types.LOADING_STATE.html" class="tsd-signature-type tsd-kind-type-alias">LOADING_STATE</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;NEVER_LOADED&quot;</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
+<div class="tsd-type-declaration">
+<h4>Type declaration</h4>
+<ul class="tsd-parameters">
+<li class="tsd-parameter">
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-property">data</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type tsd-kind-type-parameter">ResolveType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5></li>
+<li class="tsd-parameter">
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type tsd-kind-type-parameter">Error</span></h5></li>
+<li class="tsd-parameter">
+<h5><span class="tsd-kind-property">is<wbr/>Loading</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span></h5></li>
+<li class="tsd-parameter">
+<h5><span class="tsd-kind-property">loading<wbr/>State</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Extract</span><span class="tsd-signature-symbol">&lt;</span><a href="_watchable_react_request.types.LOADING_STATE.html" class="tsd-signature-type tsd-kind-type-alias">LOADING_STATE</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;LOADING&quot;</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
+<div class="tsd-type-declaration">
+<h4>Type declaration</h4>
+<ul class="tsd-parameters">
+<li class="tsd-parameter">
+<h5><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type tsd-kind-type-parameter">Error</span></h5></li>
+<li class="tsd-parameter">
+<h5><span class="tsd-kind-property">is<wbr/>Loading</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">false</span></h5></li>
+<li class="tsd-parameter">
+<h5><span class="tsd-kind-property">loading<wbr/>State</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Extract</span><span class="tsd-signature-symbol">&lt;</span><a href="_watchable_react_request.types.LOADING_STATE.html" class="tsd-signature-type tsd-kind-type-alias">LOADING_STATE</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;ERROR&quot;</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
+<div class="tsd-type-declaration">
+<h4>Type declaration</h4>
+<ul class="tsd-parameters">
+<li class="tsd-parameter">
+<h5><span class="tsd-kind-property">data</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type tsd-kind-type-parameter">ResolveType</span></h5></li>
+<li class="tsd-parameter">
+<h5><span class="tsd-kind-property">is<wbr/>Loading</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">false</span></h5></li>
+<li class="tsd-parameter">
+<h5><span class="tsd-kind-property">loading<wbr/>State</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Extract</span><span class="tsd-signature-symbol">&lt;</span><a href="_watchable_react_request.types.LOADING_STATE.html" class="tsd-signature-type tsd-kind-type-alias">LOADING_STATE</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;LOADED&quot;</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/marcusletric/watchable-react/blob/4b631bb/packages/store-hooks/lib/usePartition.ts#L13">usePartition.ts:13</a></li></ul></aside></li></ul></section></div>
+<li>Defined in types/request.ts:13</li></ul></aside></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>requestHandler | @watchable-react - v0.1.0</title><meta name="description" content="Documentation for @watchable-react"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>useRequest | @watchable-react - v0.1.0</title><meta name="description" content="Documentation for @watchable-react"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -14,56 +14,60 @@
 <ul class="tsd-breadcrumb">
 <li><a href="../index.html">@watchable-react</a></li>
 <li><a href="../modules/_watchable_react_request.html">@watchable-react/request</a></li>
-<li><a href="_watchable_react_request.requestHandler.html">requestHandler</a></li></ul>
-<h1>Function requestHandler</h1></div>
+<li><a href="../modules/_watchable_react_request.lib.html">lib</a></li>
+<li><a href="_watchable_react_request.lib.useRequest.html">useRequest</a></li></ul>
+<h1>Function useRequest</h1></div>
 <section class="tsd-panel">
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="requestHandler"><span class="tsd-kind-call-signature">request<wbr/>Handler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">StoreSchema</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type tsd-kind-type-parameter">ResolveType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type tsd-kind-type-parameter">CachePartitionKey</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">requestPromise</span>, <span class="tsd-kind-parameter">store</span>, <span class="tsd-kind-parameter">cachePartitonName</span>, <span class="tsd-kind-parameter">cacheFolder</span>, <span class="tsd-kind-parameter">cacheId</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><a href="#requestHandler" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="useRequest"><span class="tsd-kind-call-signature">use<wbr/>Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">ResolveType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type tsd-kind-type-parameter">StoreSchema</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type tsd-kind-type-parameter">ExecutorArgs</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">store</span>, <span class="tsd-kind-parameter">requestExecutor</span>, <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">currentArgs</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="../types/_watchable_react_request.types.RequestResult.html" class="tsd-signature-type tsd-kind-type-alias">RequestResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Immutable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">ResolveType</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">args</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">]</span><a href="#useRequest" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>This function handles XHR requests and caching in a 
-<a href="https://watchable.dev/api/interfaces/_watchable_store.Store.html">Store</a>. It takes a promise and updates the store with a RequestResult:</p>
+<div class="tsd-comment tsd-typography"><p>A hook for tracking the <a href="../types/_watchable_react_request.types.RequestResult.html" class="tsd-kind-type-alias">RequestResult</a> of a
+request. It provides a reference to a refresh function.</p>
 </div>
 <section class="tsd-panel">
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">StoreSchema</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">object</span></h4></li>
-<li>
 <h4><span class="tsd-kind-type-parameter">ResolveType</span></h4></li>
 <li>
-<h4><span class="tsd-kind-type-parameter">CachePartitionKey</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h4></li></ul></section>
+<h4><span class="tsd-kind-type-parameter">StoreSchema</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">object</span></h4></li>
+<li>
+<h4><span class="tsd-kind-type-parameter">ExecutorArgs</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">requestPromise</span>: <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">ResolveType</span><span class="tsd-signature-symbol">&gt;</span></h5>
-<div class="tsd-comment tsd-typography"><p>The Promise of the request to handle.</p>
+<h5><span class="tsd-kind-parameter">store</span>: <a href="../types/_watchable_react_request.types.StoreWithCache.html" class="tsd-signature-type tsd-kind-type-alias">StoreWithCache</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">StoreSchema</span><span class="tsd-signature-symbol">, </span><a href="../types/_watchable_react_request.types.RequestResult.html" class="tsd-signature-type tsd-kind-type-alias">RequestResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">ResolveType</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;____REQUEST_CACHE&quot;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+<div class="tsd-comment tsd-typography"><p>The <a href="https://watchable.dev/api/interfaces/_watchable_store.Store.html">Store</a> to use for cacheing.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li>
 <li>
-<h5><span class="tsd-kind-parameter">store</span>: <span class="tsd-signature-type ">StoreWithCache</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">StoreSchema</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type ">RequestResult</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">ResolveType</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type tsd-kind-type-parameter">CachePartitionKey</span><span class="tsd-signature-symbol">&gt;</span></h5>
-<div class="tsd-comment tsd-typography"><p>The <a href="https://watchable.dev/api/interfaces/_watchable_store.Store.html">Store</a> that has the CachePartition.</p>
+<h5><span class="tsd-kind-parameter">requestExecutor</span>: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">args</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">ResolveType</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></h5>
+<div class="tsd-comment tsd-typography"><p>the function that returns with the promise of the XHR request.</p>
 </div>
-<div class="tsd-comment tsd-typography"></div></li>
+<div class="tsd-comment tsd-typography"></div>
+<ul class="tsd-parameters">
+<li class="tsd-parameter-signature">
+<ul class="tsd-signatures">
+<li class="tsd-signature"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">args</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">ResolveType</span><span class="tsd-signature-symbol">&gt;</span></li>
+<li class="tsd-description">
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">cachePartitonName</span>: <span class="tsd-signature-type tsd-kind-type-parameter">CachePartitionKey</span></h5>
-<div class="tsd-comment tsd-typography"><p>key of the store where the cache records are held.</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li>
+<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">args</span>: <span class="tsd-signature-type tsd-kind-type-parameter">ExecutorArgs</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">ResolveType</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></li>
 <li>
-<h5><span class="tsd-kind-parameter">cacheFolder</span>: <span class="tsd-signature-type">string</span></h5>
-<div class="tsd-comment tsd-typography"><p>name of the category in which to store the cache records.</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li>
-<li>
-<h5><span class="tsd-kind-parameter">cacheId</span>: <span class="tsd-signature-type">string</span></h5>
-<div class="tsd-comment tsd-typography"><p>the identifier of a cached entry.</p>
+<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">currentArgs</span>: <span class="tsd-signature-type tsd-kind-type-parameter">ExecutorArgs</span></h5>
+<div class="tsd-comment tsd-typography"><p>the arguments the requestExecutor will be called with</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><a href="../types/_watchable_react_request.types.RequestResult.html" class="tsd-signature-type tsd-kind-type-alias">RequestResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Immutable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">ResolveType</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">args</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">]</span></h4><p>a tuple with the current <a href="../types/_watchable_react_request.types.RequestResult.html" class="tsd-kind-type-alias">RequestResult</a> and the reference to a refresh function.
+Calling this function will do subsequent requests that are cache-managed.</p>
+
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/marcusletric/watchable-react/blob/a57ab6f/packages/request/lib/requestHandler.ts#L51">requestHandler.ts:51</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/marcusletric/watchable-react/blob/4b631bb/packages/request/lib/useRequest.ts#L20">lib/useRequest.ts:20</a></li></ul></aside></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
