@@ -1,5 +1,5 @@
 <div align="center">
-  # React extension packages for [@watchable/store-react](https://watchable.dev/api/modules/_watchable_store_react.html)
+  # React extension packages for [\@watchable/store-react](https://watchable.dev/api/modules/_watchable_store_react.html)
 
    [![Coverage Status](https://coveralls.io/repos/github/marcusletric/watchable-react/badge.svg?branch=main)](https://coveralls.io/github/marcusletric/watchable-react?branch=main)
 </div>
