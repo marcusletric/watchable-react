@@ -32,5 +32,9 @@
     "@watchable/store": "^1.0.0-alpha.5",
     "@watchable/store-react": "^1.0.0-alpha.5",
     "react": "^18.2.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
