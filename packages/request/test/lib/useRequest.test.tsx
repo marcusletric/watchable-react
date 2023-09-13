@@ -2,11 +2,11 @@ import React, { useState, type FC, type Dispatch, type SetStateAction } from 're
 import { createStore } from "@watchable/store";
 import { vi, describe, test, expect, afterEach } from "vitest";
 import { render, screen, waitFor, cleanup as renderCleanup } from '@testing-library/react';
-import { useRequest } from '../../lib';
-import type { RequestResult, StoreWithCache } from "../../types";
+import { useRequest } from '../../src/lib';
+import type { RequestResult, StoreWithCache } from "../../src/types";
 import { mockRequest, resetRequestMock, setResponseDelay } from '../mocks/mockRequest';
 import mockResponses from '../mocks/mockResponses.json';
-import { DEFAULT_REQUEST_CACHE_PARTITION_NAME } from '../../lib/requestHandler';
+import { DEFAULT_REQUEST_CACHE_PARTITION_NAME } from '../../src/lib/requestHandler';
 
 
 interface TestComponentProps {

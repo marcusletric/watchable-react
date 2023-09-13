@@ -1,7 +1,7 @@
 import { createStore } from "@watchable/store";
 
-import { requestHandler } from '../../lib';
-import { DEFAULT_REQUEST_CACHE_PARTITION_NAME } from "../../lib/requestHandler";
+import { requestHandler } from '../../src/lib';
+import { DEFAULT_REQUEST_CACHE_PARTITION_NAME } from "../../src/lib/requestHandler";
 import { describe, test, expect } from "vitest";
 
 

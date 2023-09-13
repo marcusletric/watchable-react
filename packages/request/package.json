@@ -1,13 +1,19 @@
 {
   "name": "@watchable-react/request",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "description": "React request management and caching module for @watchable/store",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "README.md",
+    "dist",
+    "src"
+  ],
   "scripts": {
     "test": "vitest run",
     "coverage": "vitest run --coverage",
-    "build": "rimraf ./dist && tsc --project tsconfig.build.json && vite build"
+    "build": "rimraf ./dist && rimraf ./tsconfig.build.tsbuildinfo && tsc --project tsconfig.build.json && vite build"
   },
   "keywords": [],
   "author": "Kornel Martyin",
@@ -23,6 +29,7 @@
     "@watchable/store-react": "^1.0.0-alpha.5",
     "jsdom": "^22.1.0",
     "react": "^18.2.0",
+    "typescript": "^5.2.2",
     "vite": "^4.4.9",
     "vitest": "^0.34.3"
   },
@@ -32,8 +39,7 @@
     "react": "^18.2.0"
   },
   "dependencies": {
-    "object-hash": "^3.0.0",
-    "typescript": "^5.2.2"
+    "object-hash": "^3.0.0"
   },
   "publishConfig": {
     "access": "public",

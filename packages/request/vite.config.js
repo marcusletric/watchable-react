@@ -8,7 +8,7 @@ export default defineConfig({
         target: 'node14',
         minify: true,
         lib: {
-            entry: path.resolve(__dirname, 'lib/index.ts'),
+            entry: path.resolve(__dirname, 'src/lib/index.ts'),
             formats: ['es', 'cjs'],
             name: 'request',
             fileName: 'request',

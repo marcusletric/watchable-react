@@ -2,7 +2,7 @@ import React, { type FC } from "react";
 import { render, waitFor, screen, cleanup, act } from "@testing-library/react";
 import { createStore, type Immutable, type Selector, type Store, type RootState, type PartitionableState } from "@watchable/store";
 
-import { usePartition } from "../../lib/usePartition";
+import { usePartition } from "../../src/lib/usePartition";
 import { describe, test, expect } from "vitest";
 
 describe("usePartition : create, watch and update a partition", () => {

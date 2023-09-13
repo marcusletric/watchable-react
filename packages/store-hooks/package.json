@@ -1,20 +1,23 @@
 {
   "name": "@watchable-react/store-hooks",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.1.0",
+  "description": "React hooks extension module for @watchable/store",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "README.md",
+    "dist",
+    "src"
+  ],
   "scripts": {
     "test": "vitest run",
     "coverage": "vitest run --coverage",
-    "build": "rimraf ./dist && tsc --project tsconfig.build.json && vite build"
+    "build": "rimraf ./dist && rimraf ./tsconfig.build.tsbuildinfo && tsc --project tsconfig.build.json && vite build"
   },
   "keywords": [],
   "author": "Kornel Martyin",
   "license": "MIT",
-  "dependencies": {
-    "typescript": "^5.2.2"
-  },
   "devDependencies": {
     "@testing-library/dom": "^9.3.1",
     "@testing-library/react": "^14.0.0",
@@ -25,6 +28,7 @@
     "@watchable/store-react": "^1.0.0-alpha.5",
     "jsdom": "^22.1.0",
     "react": "^18.2.0",
+    "typescript": "^5.2.2",
     "vite": "^4.4.9",
     "vitest": "^0.34.3"
   },

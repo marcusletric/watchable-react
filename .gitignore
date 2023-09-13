@@ -2,5 +2,6 @@
 /packages/**/node_modules
 /packages/**/dist
 /packages/**/coverage
-/packages/**/.turbo
+/packages/**/.turbo/
+/packages/**/tsconfig.build.tsbuildinfo
 notes
