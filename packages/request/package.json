@@ -1,6 +1,6 @@
 {
   "name": "@watchable-react/request",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "React request management and caching module for @watchable/store",
   "type": "module",
   "main": "dist/index.js",

@@ -11,7 +11,7 @@ export default defineConfig({
             entry: path.resolve(__dirname, 'src/lib/index.ts'),
             formats: ['es', 'cjs'],
             name: 'store-hooks',
-            fileName: 'store-hooks',
+            fileName: 'index',
         },
         rollupOptions: {
             external: Object.keys(packageJson.peerDependencies),
