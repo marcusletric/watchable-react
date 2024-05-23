@@ -1,0 +1,41 @@
+{
+  "name": "@watchable-react/cache",
+  "version": "0.1.0",
+  "description": "Caching module for @watchable/store",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "README.md",
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "coverage": "vitest run --coverage",
+    "build": "rimraf ./dist && rimraf ./tsconfig.build.tsbuildinfo && tsc --project tsconfig.build.json && vite build"
+  },
+  "keywords": [],
+  "author": "Kornel Martyin",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/object-hash": "^3.0.4",
+    "@vitest/coverage-istanbul": "^0.34.4",
+    "@watchable/store": "^1.0.0-alpha.5",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.3"
+  },
+  "peerDependencies": {
+    "@watchable/store": "^1.0.0-alpha.5",
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "object-hash": "^3.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

@@ -1,38 +1,38 @@
 import React, { type FC } from "react";
-import { render, waitFor, screen, cleanup, act } from "@testing-library/react";
-import { createStore, type Immutable, type Selector, type Store, type RootState, type PartitionableState } from "@watchable/store";
+import { render, screen} from "@testing-library/react";
+import { createStore, type Store } from "@watchable/store";
 
-import { usePartition } from "../../src/lib/usePartition";
 import { describe, test, expect } from "vitest";
+import { useProperty } from "../../src";
 
-describe("usePartition : create, watch and update a partition", () => {
+describe("useProperty : create, watch and update a partition", () => {
 
-    type TestState = Record<string, object>;
+    type TestState = Record<string, unknown>;
 
     interface TestComponentProps {
         store: Store<TestState>,
-        updateRefGetter?: (updateFn: (newValue: Store<TestState>) => void) => void;
+        updateRefGetter?: (updateFn: (newValue: TestState[keyof TestState]) => void) => void;
     }
 
 
-    test("Creates, watches and updates a new partition", async () => {
+    test("Watches and updates a property in a state", async () => {
         const store = createStore<TestState>({} as const);
 
         const Component: FC<TestComponentProps> = ({ store, updateRefGetter }) => {
-            const [value, updateValue] = usePartition<TestState>(store, "partition");
+            const [value, updateValue] = useProperty<TestState>(store, "partition");
             if (updateRefGetter !== undefined) {
                 updateRefGetter(updateValue);
             }
             return <div data-testid="component">{JSON.stringify(value)}</div>;
         };
 
-        let updater: (value: Immutable<PartitionableState<keyof TestState>[keyof TestState]>) => void = (value) => { console.log(value); };
-        const updateRefGetter = (updateFn) => { updater = updateFn; };
+        let updater: (newValue: TestState[keyof TestState]) => void = () => console.log("unassigned updater");
+        const updateRefGetter = (updateFn: (newValue: TestState[keyof TestState]) => void) => { updater = updateFn; };
 
         render(<Component {...{ store, updateRefGetter }} />);
 
         expect((await screen.findByTestId("component")).textContent).toBe(
-            ""
+            "null"
         );
 
         updater(1);

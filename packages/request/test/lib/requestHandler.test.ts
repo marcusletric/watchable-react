@@ -1,5 +1,6 @@
 import { createStore } from "@watchable/store";
-
+import { Cache, StateWithCachePartition } from "@watchable-react/cache";
+import { RequestResult } from "../../src";
 import { requestHandler } from '../../src/lib';
 import { DEFAULT_REQUEST_CACHE_PARTITION_NAME } from "../../src/lib/requestHandler";
 import { describe, test, expect } from "vitest";
@@ -8,100 +9,88 @@ import { describe, test, expect } from "vitest";
 describe("requestHandler", () => {
     // Happy path
     test("Can handle and store in cache a basic request when the store is prepared", async () => {
-        const store = createStore({ [DEFAULT_REQUEST_CACHE_PARTITION_NAME]: {} });
+        const store = createStore<StateWithCachePartition<RequestResult<number>, string>>({ [DEFAULT_REQUEST_CACHE_PARTITION_NAME]: {} });
+        const cache = new Cache<RequestResult<number>>(store, DEFAULT_REQUEST_CACHE_PARTITION_NAME);
         const requestFn = async () => await Promise.resolve(1);
+        const params:any[] = [];
 
-        await requestHandler(requestFn(), store, DEFAULT_REQUEST_CACHE_PARTITION_NAME, "numbers", "1");
+        await requestHandler<number,string[]>(cache, requestFn, ...params);
 
-        expect(store.read()).toStrictEqual({
-            [DEFAULT_REQUEST_CACHE_PARTITION_NAME]: {
-                "numbers": {
-                    "1": {
-                        data: 1,
-                        isLoading: false,
-                        loadingState: 'LOADED',
-                    },
-                }
-            }
+        expect(cache.getEntry(requestFn,params)).toStrictEqual({
+            data: 1,
+            isLoading: false,
+            loadingState: 'LOADED',
         });
-
     });
 
     // Still happy path
     test("Can handle and store in cache a basic request when there is no cache partition in the store", async () => {
         const store = createStore({});
+        const cache = new Cache<RequestResult<number>>(store, DEFAULT_REQUEST_CACHE_PARTITION_NAME);
         const requestFn = async () => await Promise.resolve(1);
+        const params:any[] = [];
 
-        await requestHandler(requestFn(), store, DEFAULT_REQUEST_CACHE_PARTITION_NAME, "numbers", "1");
-
-        expect(store.read()).toStrictEqual({
-            [DEFAULT_REQUEST_CACHE_PARTITION_NAME]: {
-                "numbers": {
-                    "1": {
-                        data: 1,
-                        isLoading: false,
-                        loadingState: 'LOADED',
-                    },
-                }
-            }
+        await requestHandler<number,string[]>(cache, requestFn, ...params);
+        expect(cache.getEntry(requestFn,params)).toStrictEqual({
+            data: 1,
+            isLoading: false,
+            loadingState: 'LOADED',
         });
-
     });
 
 
     // Happy but more convoluted path
     test("Can handle and store in cache multipe basic requests", async () => {
         const store = createStore({});
-        const requestFn = async (param) => await Promise.resolve(param);
-        const errorFn = async (param) => await Promise.reject(new Error(param));
+        const cache = new Cache<RequestResult<number>>(store, DEFAULT_REQUEST_CACHE_PARTITION_NAME);
+        const requestFn = async (...params:any[]) => await Promise.resolve(params[params.length-1]);
+        const errorFn = async (...params:any[]) => await Promise.reject(new Error(params[params.length-1]));
 
-        await requestHandler(requestFn(1), store, DEFAULT_REQUEST_CACHE_PARTITION_NAME, "numbers", "1");
-        await requestHandler(requestFn(2), store, DEFAULT_REQUEST_CACHE_PARTITION_NAME, "numbers", "2");
-        await requestHandler(requestFn(3), store, DEFAULT_REQUEST_CACHE_PARTITION_NAME, "numbers", "3");
-        await requestHandler(requestFn("a"), store, DEFAULT_REQUEST_CACHE_PARTITION_NAME, "chars", "a");
-        await requestHandler(requestFn("b"), store, DEFAULT_REQUEST_CACHE_PARTITION_NAME, "chars", "b");
-        await requestHandler(requestFn("c"), store, DEFAULT_REQUEST_CACHE_PARTITION_NAME, "chars", "a");
-        await requestHandler(errorFn("d"), store, DEFAULT_REQUEST_CACHE_PARTITION_NAME, "chars", "c");
+        
+        await requestHandler<number,any[]>(cache, requestFn, "numbers", 1);
+        await requestHandler<number,any[]>(cache, requestFn, "numbers", 2);
+        await requestHandler<number,any[]>(cache, requestFn, "numbers", 3);
+        await requestHandler<number,string[]>(cache, requestFn, "chars", "a");
+        await requestHandler<number,string[]>(cache, requestFn, "chars", "b");
+        await requestHandler<number,string[]>(cache, requestFn, "chars", "a");
+        await requestHandler<number,string[]>(cache, errorFn, "chars", "c");
 
-        expect(store.read()).toStrictEqual({
-            [DEFAULT_REQUEST_CACHE_PARTITION_NAME]: {
-                "numbers": {
-                    "1": {
-                        data: 1,
-                        isLoading: false,
-                        loadingState: 'LOADED',
-                    },
-                    "2": {
-                        data: 2,
-                        isLoading: false,
-                        loadingState: 'LOADED',
-                    },
-                    "3": {
-                        data: 3,
-                        isLoading: false,
-                        loadingState: 'LOADED',
-                    },
-                },
-                "chars": {
-                    "a": {
-                        data: "c",
-                        isLoading: false,
-                        loadingState: 'LOADED',
-                    },
-                    "b": {
-                        data: "b",
-                        isLoading: false,
-                        loadingState: 'LOADED',
-                    },
-                    "c": {
-                        error: Error("d"),
-                        isLoading: false,
-                        loadingState: 'ERROR',
-                    },
-                }
-            }
+        expect(cache.getEntry(requestFn,["numbers", 1])).toStrictEqual({
+            data: 1,
+            isLoading: false,
+            loadingState: 'LOADED',
         });
 
+        expect(cache.getEntry(requestFn,["numbers", 2])).toStrictEqual({
+            data: 2,
+            isLoading: false,
+            loadingState: 'LOADED',
+        });
+        expect(cache.getEntry(requestFn,["numbers", 3])).toStrictEqual({
+            data: 3,
+            isLoading: false,
+            loadingState: 'LOADED',
+        });
+        expect(cache.getEntry(requestFn,["chars", "a"])).toStrictEqual({
+            data: "a",
+            isLoading: false,
+            loadingState: 'LOADED',
+        });
+        expect(cache.getEntry(requestFn,["chars", "b"])).toStrictEqual({
+            data: "b",
+            isLoading: false,
+            loadingState: 'LOADED',
+        });
+        expect(cache.getEntry(requestFn,["chars", "a"])).toStrictEqual({
+            data: "a",
+            isLoading: false,
+            loadingState: 'LOADED',
+        });
+        expect(cache.getEntry(errorFn,["chars", "c"])).toStrictEqual({
+            error: new Error("c"),
+            isLoading: false,
+            loadingState: 'ERROR',
+        });
     });
 
 });

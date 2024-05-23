@@ -1,8 +1,8 @@
 # @watchable-react/request
 
-Adds a utility to handle and cache requests in [@watchable/store](https://www.npmjs.com/package/@watchable/store)
+Adds a utility to handle requests wit cached responses stored in [@watchable/store](https://www.npmjs.com/package/@watchable/store)
 
-Read the [API Reference](https://watchable.dev/api/modules/_watchable_request.html) or the reference usages below, or [browse the source on Github](https://github.com/cefn/watchable/tree/main/packages/request).
+Read the [API Reference](https://marcusletric.github.io/watchable-react/) or the reference usages below, or [browse the source on Github](https://github.com/marcusletric/watchable-react/tree/main/packages/request).
 
 ## Getting Started
 

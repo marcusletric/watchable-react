@@ -1,12 +1,9 @@
 
-> @watchable-react/request@0.1.0 build /Users/kmartyin/work/watchable-react/packages/request
-> rimraf ./dist && tsc --project tsconfig.build.json && vite build
+> @watchable-react/request@1.3.0 build /Users/kmartyin/work/watchable-react/packages/request
+> rimraf ./dist && rimraf ./tsconfig.build.tsbuildinfo && tsc --project tsconfig.build.json && vite build
 
-vite v4.4.9 building for production...
-transforming...
-✓ 7 modules transformed.
-rendering chunks...
-computing gzip size...
-dist/request.mjs  52.58 kB │ gzip: 12.98 kB
-dist/request.js  35.95 kB │ gzip: 11.62 kB
-✓ built in 160ms
+[36mvite v4.4.9 [32mbuilding for production...[36m[39m
+[2K[1Gtransforming (1) [2msrc/lib/index.ts[22m[2K[1G[32m✓[39m 4 modules transformed.
+[2K[1Grendering chunks (1)...[2K[1G[2K[1Gcomputing gzip size (0)...[2K[1Gcomputing gzip size (1)...[2K[1G[2mdist/[22m[36mindex.js  [39m[1m[2m53.34 kB[22m[1m[22m[2m │ gzip: 13.30 kB[22m
+[2K[1Grendering chunks (1)...[2K[1G[2K[1Gcomputing gzip size (1)...[2K[1G[2mdist/[22m[36mindex.cjs  [39m[1m[2m36.39 kB[22m[1m[22m[2m │ gzip: 11.78 kB[22m
+[32m✓ built in 152ms[39m

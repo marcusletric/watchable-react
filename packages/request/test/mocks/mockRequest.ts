@@ -2,12 +2,13 @@ import mockResponses from "./mockResponses.json";
 let counter = 0;
 let delay = 0;
 
-export const mockRequest = async (...args) => {
+export const mockRequest: (...args:any[]) => Promise<any> = async (...args: any[]) => {
     return await new Promise((resolve, reject) => {
-        if (mockResponses[args[0]] !== undefined) {
+        const mockResponse: any = (mockResponses as any)[args[0]];
+        if (mockResponse !== undefined ) {
             if (args[0] !== "refreshable") {
                 setTimeout(() => {
-                    resolve(mockResponses[args[0]]);
+                    resolve(mockResponse);
                 }, delay);
             } else {
                 setTimeout(() => {

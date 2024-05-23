@@ -20,7 +20,7 @@ export type RequestResult<ResolveType, Error = unknown> =
     {
         isLoading: true;
         loadingState: Extract<LOADING_STATE, "LOADING">;
-        data?: ResolveType | null;
+        data?: ResolveType;
         error?: Error
     }
     // retrieval failed - loading===false, has errors

@@ -1,0 +1,10 @@
+{
+    "extends": [
+        "../../typedoc.base.json"
+    ],
+    "entryPoints": [
+        "src/lib/index.ts",
+        "src/types/index.ts"
+    ],
+    "tsconfig": "./tsconfig.build.json"
+}
