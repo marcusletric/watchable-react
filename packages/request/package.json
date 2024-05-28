@@ -1,6 +1,6 @@
 {
   "name": "@watchable-react/request",
-  "version": "1.3.0",
+  "version": "1.3.2",
   "description": "React request management and caching module for @watchable/store",
   "type": "module",
   "main": "dist/index.js",
@@ -26,7 +26,6 @@
     "@types/object-hash": "^3.0.4",
     "@types/react": "^18.2.21",
     "@vitest/coverage-istanbul": "^0.34.4",
-    "@watchable-react/cache": "workspace:*",
     "@watchable/store": "^1.0.0-alpha.5",
     "@watchable/store-react": "^1.0.0-alpha.5",
     "jsdom": "^22.1.0",
@@ -41,7 +40,8 @@
     "react": "^18.2.0"
   },
   "dependencies": {
-    "object-hash": "^3.0.0"
+    "object-hash": "^3.0.0",
+    "@watchable-react/cache": "0.1.0"
   },
   "publishConfig": {
     "access": "public",

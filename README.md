@@ -1,7 +1,7 @@
 <div align="center">
 
   # React extension packages for [@watchable/store-react](https://watchable.dev/api/modules/_watchable_store_react.html)
-   [![Coverage Status](https://coveralls.io/repos/github/marcusletric/watchable-react/badge.svg?branch=main)](https://coveralls.io/github/marcusletric/watchable-react?branch=main)
+   [![Coverage Status](https://coveralls.io/repos/github/marcusletric/watchable-react/badge.svg)](https://coveralls.io/github/marcusletric/watchable-react)
 </div>
 
 
@@ -9,6 +9,14 @@
 
 This monorepo holds some utilities to streamline app development when using [@watchable/store](https://watchable.dev/api/modules/_watchable_store.html).
 **Read the API documentation [here](https://marcusletric.github.io/watchable-react/)**
+
+### @watchable-react/cache
+
+![npm (scoped)](https://img.shields.io/npm/v/%40watchable-react/cache)
+![npm](https://img.shields.io/npm/dt/%40watchable-react%2Fcache)
+![NPM](https://img.shields.io/npm/l/%40watchable-react%2Fcache)
+
+Cache utility to use alongside [@watchable/store](https://watchable.dev/api/modules/_watchable_store.html).
 
 ### @watchable-react/request
 
@@ -18,7 +26,9 @@ This monorepo holds some utilities to streamline app development when using [@wa
 
 This package has the [useRequest](https://marcusletric.github.io/watchable-react/functions/_watchable_react_request.useRequest.html) hook that tries to simplify HTTP request management in a watchable store. It deals with caching and status management out of the box.
 
-### @watchable-react/store-hooks
+### @watchable-react/store-hooks :warning:DEPRECATED:warning:
+
+This functionality is now available in @watchable/store-react package, see [useStateProperty](https://watchable.dev/api/functions/_watchable_store_react.useStateProperty.html)
 
 ![npm (scoped)](https://img.shields.io/npm/v/%40watchable-react/store-hooks)
 ![npm](https://img.shields.io/npm/dt/%40watchable-react%2Fstore-hooks)
